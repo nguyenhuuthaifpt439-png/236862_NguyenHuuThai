@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/foods';
+// URL API chính thức trên Render
+const API_URL = 'https://api-236862.onrender.com/api/foods';
 
 function App() {
   const [foods, setFoods] = useState([]);
