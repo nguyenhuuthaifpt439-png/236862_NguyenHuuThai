@@ -1,17 +1,14 @@
 # Quản Lý Món Ăn - MSSV 236862
 
-Hệ thống quản lý món ăn xây dựng bằng MERN Stack (MongoDB, Express, React, Node.js).
-
-## Quy Ước Đặt Tên & Cấu Hình
-- **GitHub Repository:** `236862_NguyenHuuThai`
-- **Database Name:** `236862_NguyenHuuThai`
-- **Collection Name:** `foods`
-- **Docker Hub Backend Image:** `nguyenhuuthaifpt439/backend`
+## Thông Tin Docker Hub Images
+- **Backend Image:** `nguyenhuuthai1511/backend`
+- **Frontend Image:** `nguyenhuuthai1511/frontend`
 
 ---
 
-## Hướng Dẫn Chạy Backend Bằng Docker
+## Hướng Dẫn Chạy Bằng Docker
 
-### 1. Kéo Image từ Docker Hub
+### 1. Chạy Backend Container
 ```bash
-docker pull nguyenhuuthaifpt439/backend
+docker pull nguyenhuuthai1511/backend
+docker run -d -p 5000:5000 --name backend-app -e PORT=5000 -e MONGO_URI="mongodb+srv://admin:123123Aa@cluster0.eaue62x.mongodb.net/236862_NguyenHuuThai?retryWrites=true&w=majority" nguyenhuuthai1511/backend
